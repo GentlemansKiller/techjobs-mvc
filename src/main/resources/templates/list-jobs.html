@@ -12,6 +12,15 @@
 
     <!-- TODO #3 - Use the same list display from search.html -->
 
+    <h1 th:text="${resultsCount}"></h1> <br />
+
+    <div th:each="job : ${jobs}">
+        <p th:each="entry : ${job}">
+            <span th:text="${entry.getKey()}"></span>: <span th:text="${entry.getValue()}"></span>
+        </p>
+        <hr/>
+    </div>
+
 </div>
 
 </body>
